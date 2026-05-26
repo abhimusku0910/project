@@ -1,0 +1,51 @@
+####################################
+# SSH Hardening Configuration
+####################################
+
+# Open SSH config
+
+vi /etc/config/dropbear
+
+Change:
+
+option Port '22'
+
+To:
+
+option Port '2222'
+
+####################################
+# Restart SSH service
+####################################
+
+/etc/init.d/dropbear restart
+
+####################################
+# Verify SSH port
+####################################
+
+netstat -tulpn | grep dropbear
+
+Expected:
+
+:::2222
+
+####################################
+# Generate SSH keys
+####################################
+
+ssh-keygen
+
+####################################
+# Disable password auth (optional)
+####################################
+
+vi /etc/config/dropbear
+
+Set:
+
+option PasswordAuth 'off'
+
+Restart:
+
+/etc/init.d/dropbear restart

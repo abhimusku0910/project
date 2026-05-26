@@ -1,0 +1,44 @@
+####################################
+# OpenWRT Firewall Configuration
+####################################
+
+# View current firewall rules
+uci show firewall
+
+# Display iptables rules
+iptables -L -v -n
+
+####################################
+# Block ICMP (Ping)
+####################################
+
+uci add firewall rule
+uci set firewall.@rule[-1].name='Block-ICMP'
+uci set firewall.@rule[-1].src='wan'
+uci set firewall.@rule[-1].proto='icmp'
+uci set firewall.@rule[-1].target='REJECT'
+
+####################################
+# Block HTTP Port 80
+####################################
+
+uci add firewall rule
+uci set firewall.@rule[-1].name='Block-HTTP'
+uci set firewall.@rule[-1].src='wan'
+uci set firewall.@rule[-1].proto='tcp'
+uci set firewall.@rule[-1].dest_port='80'
+uci set firewall.@rule[-1].target='REJECT'
+
+####################################
+# Save and restart firewall
+####################################
+
+uci commit firewall
+/etc/init.d/firewall restart
+
+####################################
+# Verify firewall rules
+####################################
+
+uci show firewall
+iptables -L

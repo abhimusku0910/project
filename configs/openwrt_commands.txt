@@ -1,0 +1,65 @@
+####################################
+# Network Information
+####################################
+
+ip addr
+ip route
+
+####################################
+# Connectivity Test
+####################################
+
+
+ping google.com
+
+####################################
+# Password Hardening
+####################################
+
+passwd
+
+####################################
+# View password hashes
+####################################
+
+cat /etc/shadow
+
+####################################
+# Firewall
+####################################
+
+uci show firewall
+iptables -L -v -n
+
+####################################
+# Services
+####################################
+
+ls /etc/init.d/
+
+####################################
+# Disable unused services
+####################################
+
+/etc/init.d/uhttpd disable
+
+####################################
+# Traffic Capture
+####################################
+
+tcpdump -i any
+
+Save packet capture:
+
+tcpdump -i any -w http_capture.pcap
+
+Capture SSH:
+
+tcpdump -i any port 2222 -w ssh_capture.pcap
+
+####################################
+# Restart services
+####################################
+
+/etc/init.d/firewall restart
+/etc/init.d/dropbear restart
