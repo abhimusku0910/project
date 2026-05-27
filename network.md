@@ -41,7 +41,7 @@ The tests confirmed communication between host and OpenWRT.
 ## Evidence
 #### - ip addr
 The following is a screenshot of output of ip addr:
-![Output ip addr](./images/week9-task1-Score.png)
+![Output ip addr](./images/ip_addr.png)
 
 
 - ping tests
