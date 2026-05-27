@@ -44,7 +44,18 @@ The following is a screenshot of output of ip addr:
 
 ![Output ip addr](./images/ip_addr.png)
 
+#### - ping tests
+The following is a screenshot of output of ping tests:
 
-- ping tests
-- VirtualBox adapters
-- OpenWRT terminal
+![Ping Test](./images/ping_test.png)
+
+#### - VirtualBox adapters
+The following is a screenshot of VirtualBox network adapters:
+
+![VirtualBox Adapters](./images/.png)
+
+#### - OpenWRT terminal
+The following is a screenshot of OpenWRT terminal output:
+
+![OpenWRT Terminal](./images/openwrt_dashboard.png)
+
