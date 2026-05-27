@@ -52,7 +52,7 @@ The following is a screenshot of output of ping tests:
 #### - VirtualBox adapters
 The following is a screenshot of VirtualBox network adapters:
 
-![VirtualBox Adapters](./images/password_and__packges.png)
+![VirtualBox Adapters](./images/password_and_packges.png.png)
 
 #### - OpenWRT terminal
 The following is a screenshot of OpenWRT terminal output:
